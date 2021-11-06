@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --favorite-color: green;
+    --secondary-color: rgb(0, 204, 255);
+    --hover-color: orange;
+    --text-color: yellow;
+    
+}
+
+body {
+    color: var(--favorite-color);
+    font-family: Helvetica, Arial, sans-serif;
+    
+}
+
+/* Header Start */
+
+header {
+    padding: 15px 30px;
+    background-image: url("../images/image01.jpg");
+    background-position: top;
+    background-color: var(--favorite-color);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 32px;
+    
+}
+
+header h1 a {
+    color: yellow;
+}
+
+header nav {
+    margin: 7px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: yellow;
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.5vw;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+header nav ul li a:hover {
+    background: var(--hover-color);
+    color: var(--favorite-color);
+}
+
+/* -- Header End -- */
+
+
+.section-title {
+    color: var(--hover-color);
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
+    margin: 0 auto;
+
+}
+
+section {
+    padding: 30px;
+}
+
+/* Footer Start */
+
+footer {
+    padding: 35px 40px;
+    background-color: var(--favorite-color);
+    width: 100%;
+    border: 10px solid var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+footer p {
+    color: var(--hover-color);
+}
+
+.hero {
+    background-image: url("../images/image01.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-position: 80%;
+    min-height: 600px;
+    
+}
+
+.hero h3 {
+    color: yellow;
+    font-size: 35px;
+}
+
+/* About me */
+
+.start {
+    background-color: var(--secondary-color);
+    display: flex;
+}
+
+.start h2 {
+
+}
+.projects {
+    background-color: var(--favorite-color);
+    display: flex;
+}
+
+.projects img {
+    max-height: 200px;
+    max-width: 300px;
+    min-width: 300px;
+
+    
+}
+
+
+/* Media Query for smaller Desktop Screens and smaller */
+
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+    }
+}
