@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
+    
     --favorite-color: green;
     --secondary-color: rgb(0, 204, 255);
     --title-color: rgb(0, 204, 255);
@@ -24,10 +24,13 @@ header {
     background-image: url("../images/image01.jpg");
     background-position: top;
     background-color: var(--favorite-color);
+    background-attachment: fixed;
     background-size: cover;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    top: 0;
+    z-index: 9999;
     
 
 }
@@ -40,7 +43,7 @@ header h1 {
 
 header h1 a {
     color: black;
-    background-color: white;
+  
 }
 
 header nav {
@@ -52,11 +55,12 @@ header nav ul {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    list-style: none;
 }
 
 header nav ul li a {
     color: black;
-    background-color: white;
+   
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.5vw;
@@ -77,14 +81,15 @@ header nav ul li a:hover {
     width: 80%;
     font-size: 35px;
     margin: 0 auto;
+    text-align: center;
+    border-bottom: solid rgb(10, 10, 10) 5px;
 }
 
 .border1 {
-    border-bottom: solid rgb(10, 10, 10) 10px;
-    margin: 0 30px;
+    margin-left: 170px;
     padding: 25px;
     width: 80%;
-    block-size: 700px 500px;
+   
 }
 
 section {
@@ -105,17 +110,21 @@ section {
     margin: 25px ;
     align-items: center;
     
+    
 }
 
 footer p {
-    color: var(--secondary-color);
+    color: black;
     text-align: left;
     justify-content: space-between;
+    font-size: 20px;
 }
 
 .contact-info h3 {
     color: black;
     font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .hero {
@@ -132,9 +141,11 @@ footer p {
 }
 
 .hero h3 {
-    color: var(--hover-color);
-    font-size: 55px;
-    text-align: center;
+    color: darkorange;
+    font-weight: bolder;
+    font-size: 72px;
+    text-align: bottom;
+    margin-top: 200px;
       
 }
 
@@ -142,14 +153,16 @@ footer p {
 
 /* About me */
 
-.start p {
+.about p {
     color: var(--favorite-color);
     padding: 25px;
-    position: right;
+    margin-right: 100px;
+    
+    
     
 }
 
-.start h2 {
+.about h2 {
     position: left;
 }
 
@@ -165,8 +178,6 @@ footer p {
     color: var(--hover-color);
     font-size: 20px;
     font-style: unset;
-
-    margin: 10px;
      
 }
 
@@ -212,17 +223,63 @@ footer p {
         padding-bottom: 0;
     }
 
-    .hero h3 {
-        font-size: 35px;
+    header h1 {
+        font-size: 24px;
     }
+
+    .hero h3 {
+        font-size: 45px;
+    }
+
+    .border1 {
+        margin-left: 100px;
+    }
+    
 }
 
 @media screen and (max-width: 768px){
     section {
         padding: 10px 15px;
     }
+
+    .border1 {
+        margin-left: 80px;
+    }
+
+    .hero h3 {
+        font-size: 35px;
+    }
+
 }
 
 @media screen and (max-width: 575px){
+
+    .border1 {
+        margin-left: 30px;
+    }
+
+    .projects img {
+        max-width: 70%;
+        max-height: 70%;
+        
+        
+    }
+
+    .project-titles:hover {
+        padding: 20px;
+    }
+
+    .projects img:hover {
+       
+        min-width: 95%;
+        min-Height: 95%;
+        
+    }
+
+    header nav ul li a{
+        font-size: 15px;
+    }
+
+
 
 }
