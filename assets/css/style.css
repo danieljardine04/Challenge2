@@ -2,8 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: white;
     --favorite-color: green;
     --secondary-color: rgb(0, 204, 255);
+    --title-color: rgb(0, 204, 255);
     --hover-color: orange;
     --text-color: yellow;
     
@@ -37,7 +39,8 @@ header h1 {
 }
 
 header h1 a {
-    color: yellow;
+    color: black;
+    background-color: white;
 }
 
 header nav {
@@ -52,7 +55,8 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: yellow;
+    color: black;
+    background-color: white;
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.5vw;
@@ -69,40 +73,55 @@ header nav ul li a:hover {
 
 
 .section-title {
-    color: yellow;
-    text-align: top;
+    color: var(--hover-color);
     width: 80%;
-    font-size: 25px;
+    font-size: 35px;
     margin: 0 auto;
+}
 
+.border1 {
+    border-bottom: solid rgb(10, 10, 10) 10px;
+    margin: 0 30px;
+    padding: 25px;
+    width: 80%;
+    block-size: 700px 500px;
 }
 
 section {
     padding: 30px 15px;
+    
 }
 
 /* Footer Start */
 
-footer {
-    padding: 35px 40px;
-    background-color: var(--favorite-color);
+.projects {
+   /* padding: 35px 40px;*/
+   /* background-color: var(--favorite-color); */
     width: 100%;
-    border: 10px solid var(--secondary-color);
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
+    padding: 25px;
+    margin: 25px ;
+    align-items: center;
+    
 }
 
-
-
 footer p {
-    color: var(--hover-color);
+    color: var(--secondary-color);
     text-align: left;
+    justify-content: space-between;
+}
+
+.contact-info h3 {
+    color: black;
+    font-weight: bolder;
 }
 
 .hero {
     background-image: url("../images/image01.jpg");
     background-size: cover;
+    background-color: rgba();
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -113,62 +132,77 @@ footer p {
 }
 
 .hero h3 {
-    color: yellow;
-    font-size: 35px;
+    color: var(--hover-color);
+    font-size: 55px;
+    text-align: center;
+      
 }
 
 
 
 /* About me */
 
-.start {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content:space-evenly;
-}
 .start p {
-    padding: 15px;
+    color: var(--favorite-color);
+    padding: 25px;
+    position: right;
+    
 }
 
 .start h2 {
-    position: top;
+    position: left;
 }
 
-.start p {
-    color: purple;
-}
-.projects {
-    background-color: purple;
+.projects h2 {
+    /* background-color: purple; */
+    position: left;
 }
 
 .project-titles {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+    color: var(--hover-color);
+    font-size: 20px;
+    font-style: unset;
+
     margin: 10px;
+     
 }
 
-project-titles h3 a:hover {
-    color: var(--hover-color);
+
+.chess:hover{
+    color: var(--favorite-color);
+    font-size: 30px;
+
+    
+}
+
+.risk:hover{
+    color: var(--favorite-color);
+    font-size: 30px;
+}
+
+.text-adventure:hover {
+    color: var(--favorite-color);
+    font-size: 25px;
 }
 
 .projects img {
-    border: solid var(--secondary-color);
-    max-height: 200px;
-    max-width: 300px;
-    min-width: 300px;
+    border: solid black;
+    max-height: 300px;
+    min-width: 500px;
 }
 
 .projects img:hover {
-    border: solid var(--hover-color) 12px;
-    min-width: 415px;
-    min-height: 300px;
+    border: solid var(--favorite-color) 5px;
+    min-width: 600px;
+    min-height: 400px;
+    
 
 }
 
-.contact p {
-    color: purple;
-}
+
 
 
 /* Media Query for smaller Desktop Screens and smaller */
@@ -176,6 +210,10 @@ project-titles h3 a:hover {
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;
+    }
+
+    .hero h3 {
+        font-size: 35px;
     }
 }
 
